@@ -1,0 +1,64 @@
+
+Simple cammands WINDOWS:
+cd (you can change directory)
+cd .. (back one directory)
+ls (see all files in directory)
+pwd (show directory)
+start . (opens Directory)
+clear (clear terminal)
+touch (create file)
+mkdir (make folders/directories)
+rm (delete files)
+rm -rf (deletes folder)
+cat (displays file data in terminal)
+
+GIT COMMANDS:
+git config user.name(Shows user name)
+git config --global user.name "name name" (Sets global user name, remove --global to just use it for currenct git directory)
+git config user.email(Shows email,)
+git config --global user.email "email" (Sets user email, remove --global to just use it for currenct git directory)
+------------------------------------------------------------
+1. git status (shows all info about the current repo,which branch you're currently on
+which files have been modified, added, or deleted since the last commit
+which files are staged and ready to be committed
+any untracked files that are not yet being tracked by Git)
+-----------------------------------------------------------------
+2.git init(initialize git repo)
+------------------------------------------------------------------
+3.git commit {tags} (basically groups all the chosen changes to the repo and makes a checkpoint,
+almost the same as saving but git does not save, only remembers the chosen files/folders
+that was added and commited, without -m it will open another editor)
+tag:
+-m (for messages)
+-am (commits all files that is being watched without staging them, but you have to had commited
+them before)
+--amend (for mistakes, if u messed up on the prev commit like the message or forgot to 
+stage a file, then just stage them and run this u can retype the message and commit the new staged
+items)
+----------------------------------------------------------------------
+4.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
+----------------------------------------------------
+5.git rm --cached <file>(removes files/folders that was staged with "git add")
+------------------------------------------------------------------------------------
+6. git branch (shows all the branches of the repository)
+tags:
+<name> (makes a new branch{BUT IT DOES NOT SWITCH TO IT})
+ -D <name> (delete branch but be careful since it uses --force)
+ -m <name> (Rename branch)
+ -v (gives more info like last commits on all branches)
+
+-------------------------------------------------------------------------------------
+7.git switch <branch>( switches to a specific branch)
+
+tags:
+-c <branch name> (Makes AND switches to that branch)
+---------------------------------------------------------------------------------------
+8.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
+A fast forward merge is a merge where the SELECTED HEAD does not have any commits when you merge it with
+<branch name> that has commits{ its simply catches up})
+(When resolving conflicts,after resolving you need to add and commit again to save your fix then everything is merged 
+correctly)
+
+--------------------------------------------------------------------------------------------------
+9.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files)
+TAGS:
