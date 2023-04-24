@@ -25,7 +25,11 @@ any untracked files that are not yet being tracked by Git)
 -----------------------------------------------------------------
 2.git init(initialize git repo)
 ------------------------------------------------------------------
-3.git commit {tags} (basically groups all the chosen changes to the repo and makes a checkpoint,
+3.git log (shows you all the commits, branches of the commits and shows you who commited them )
+tags:
+--oneline (shortens the long git ref but still shows all the commits with the message and branches of teh commits)
+-------------------------------------------------------------------
+4.git commit <tags> (basically groups all the chosen changes to the repo and makes a checkpoint,
 almost the same as saving but git does not save, only remembers the chosen files/folders
 that was added and commited, without -m it will open another editor)
 tag:
@@ -36,11 +40,11 @@ them before)
 stage a file, then just stage them and run this u can retype the message and commit the new staged
 items)
 ----------------------------------------------------------------------
-4.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
+5.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
 ----------------------------------------------------
-5.git rm --cached <file>(removes files/folders that was staged with "git add")
+6.git rm --cached <file>(removes files/folders that were staged with "git add")
 ------------------------------------------------------------------------------------
-6. git branch (shows all the branches of the repository)
+7. git branch (shows all the branches of the repository)
 tags:
 <name> (makes a new branch{BUT IT DOES NOT SWITCH TO IT})
  -D <name> (delete branch but be careful since it uses --force)
@@ -48,17 +52,17 @@ tags:
  -v (gives more info like last commits on all branches)
 
 -------------------------------------------------------------------------------------
-7.git switch <branch>( switches to a specific branch)
+8.git switch <branch>( switches to a specific branch)
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
 ---------------------------------------------------------------------------------------
-8.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
+9.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
 A fast forward merge is a merge where the SELECTED HEAD does not have any commits when you merge it with
 <branch name> that has commits{ its simply catches up})
 (When resolving conflicts,after resolving you need to add and commit again to save your fix then everything is merged 
 correctly)
 
 --------------------------------------------------------------------------------------------------
-9.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files)
+10.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files)
 TAGS:
