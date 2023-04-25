@@ -72,6 +72,7 @@ tags:
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
+<commit ref> (you can instead switch to a diff commit you made in the past)
 
 ---------------------------------------------------------------------------------------
 
@@ -94,6 +95,8 @@ HEAD (shows the same as the above BUT for every change since your last commit ev
 <filename> (you can choose which file to see differences, can be used with --staged and HEAD to be specific)
 branch1..branch2 (shows diff between branches)
 commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewef) as an example but this will show you the diff between two commits
+
+
 --------------------------------------------------------------------------------------------------------------
 
 
