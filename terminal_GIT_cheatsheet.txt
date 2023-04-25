@@ -63,7 +63,7 @@ items)
 tags:
 <name> (makes a new branch{BUT IT DOES NOT SWITCH TO IT})
  -D <name> (delete branch but be careful since it uses --force)
- -m <name> (Rename branch)
+ -m <name> (Rename branch, used like "-m <old branch> <new branch>)
  -v (gives more info like last commits on all branches)
 
 -------------------------------------------------------------------------------------
@@ -99,5 +99,19 @@ commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewe
 
 --------------------------------------------------------------------------------------------------------------
 
+11.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
+TAGS:
+pop (brings out everything from the stash)
+apply (applies everything from the stash but it does not remove it from stash can be used with stash ID to specify)
+--include-untracked(stashes untracked files)
+push -m <message> (makes a new stash with a message)
+clear (removes all stashes)
+drop (delete a specific stash)
 
 
+----------------------------------------------------------------------------------------------------
+
+12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes made by a previous commit.
+ When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
+
+------------------------------------------------------------------------------------------------------
