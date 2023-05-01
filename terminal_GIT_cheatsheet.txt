@@ -102,7 +102,8 @@ commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewe
 
 11.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
 TAGS:
-pop (brings out everything from the stash)
+list (shows all stashes in the directory)
+pop (brings out everything from the stash and removes the stash)
 apply (applies everything from the stash but it does not remove it from stash can be used with stash ID to specify)
 --include-untracked(stashes untracked files)
 push -m <message> (makes a new stash with a message)
@@ -112,7 +113,7 @@ drop (delete a specific stash)
 
 ----------------------------------------------------------------------------------------------------
 
-12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes made by a previous commit.
+12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
 ------------------------------------------------------------------------------------------------------
