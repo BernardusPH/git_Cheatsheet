@@ -113,7 +113,19 @@ drop (delete a specific stash)
 
 ----------------------------------------------------------------------------------------------------
 
-12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
+12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the prev commit.
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
+so if I have 2 commits:
+
+update
+first commit
+
+if I commited update before but I didnt want those changes I can just revert and it will basically be like the first time
+you worked with update but in a new commit
+
+
 ------------------------------------------------------------------------------------------------------
+
+
+"testing the basics"
