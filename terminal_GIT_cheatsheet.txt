@@ -117,3 +117,8 @@ drop (delete a specific stash)
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
 ------------------------------------------------------------------------------------------------------
+
+13. git restore . (removes all unstaged data)
+
+
+--------------------------------------------------------------------------------------------
