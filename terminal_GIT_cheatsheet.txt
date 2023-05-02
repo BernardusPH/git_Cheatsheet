@@ -37,12 +37,24 @@ tags:
 --oneline (shortens the long git ref but still shows all the commits with the message and branches of teh commits)
 
 -------------------------------------------------------------------
-4.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
+
+4. git restore . (removes all unstaged data completly, basically a clean wipe
+but can be used to restore a file to prev version with {git restore --source=<commitID> file.txt}
+)
+
+
+----------------------------------------------------------------------------------------------------
+
+5.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
 
 
 ----------------------------------------------------------------------
 
-5.git commit <tags> (basically groups all the chosen changes to the repo and makes a checkpoint,
+6.git reset(removes all staged files from the staging area)
+
+------------------------------------------------------------------
+
+7.git commit <tags> (basically groups all the chosen changes to the repo and makes a checkpoint,
 almost the same as saving but git does not save, only remembers the chosen files/folders
 that was added and commited, without -m it will open another editor)
 tag:
@@ -55,11 +67,11 @@ items)
 
 ----------------------------------------------------
 
-6.git rm --cached <file>(removes files/folders from staging area that were staged with "git add")
+8.git rm --cached <file>(removes files/folders from staging area that were staged with "git add")
 
 ------------------------------------------------------------------------------------
 
-7. git branch (shows all the branches of the repository)
+9. git branch (shows all the branches of the repository)
 tags:
 <name> (makes a new branch{BUT IT DOES NOT SWITCH TO IT})
  -D <name> (delete branch but be careful since it uses --force)
@@ -68,7 +80,7 @@ tags:
 
 -------------------------------------------------------------------------------------
 
-8.git switch <branch>(switches to a specific branch)
+10.git switch <branch>(switches to a specific branch)
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
@@ -76,7 +88,7 @@ tags:
 
 ---------------------------------------------------------------------------------------
 
-9.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
+11.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
 A fast forward merge is a merge where the SELECTED HEAD does not have any commits when you merge it with
 <branch name> that has commits{ it simply catches up})
 (a non fast forward merge is if the HEAD branch has commits after the creation of the branch
@@ -85,7 +97,7 @@ that we are merging with. This might cause merge conflicts)
 
 --------------------------------------------------------------------------------------------------
 
-10.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files, also it does not show
+12.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files, also it does not show
 for untracked files)
 (NOTE:USE THIS ON GIT KRAKEN OR AN ENLARGED GIT BASH TERMINAL. The screen will bug out and not show you
 all the details in a small terminal)
@@ -95,12 +107,15 @@ HEAD (shows the same as the above BUT for every change since your last commit ev
 --staged/--cached (shows you the diff between last commit and all the STAGED files)
 <filename> (you can choose which file to see differences, can be used with --staged and HEAD to be specific)
 branch1..branch2 (shows diff between branches)
-commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewef) as an example but this will show you the diff between two commits
+commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewef) as an example but this will show you the diff between two commits)
+
+
+git --no-pager diff (does the same as git diff but it shows all changes, helps with small window errors)
 
 
 --------------------------------------------------------------------------------------------------------------
 
-11.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
+13.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
 TAGS:
 list (shows all stashes in the directory)
 pop (brings out everything from the stash and removes the stash)
@@ -113,12 +128,22 @@ drop (delete a specific stash)
 
 ----------------------------------------------------------------------------------------------------
 
-12 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
+14 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
 ------------------------------------------------------------------------------------------------------
 
-13. git restore . (removes all unstaged data)
+15. git checkout(Man this one is a jack of all trades. it can:)
+
+lists:
+ git checkout <branch-name>(Switch to an existing branch)
+git checkout -b <new-branch-name>(make a new branch and switch to it)
+git checkout <file-name>(discards unstaged changes AND staged changes but if its staged then it wont unstage)
+git checkout .(the same with git restore)
+git checkout <commitId> filename(restores file to the chosen commit's version)
+git checkout <commitId> (Switches to old commit so now you have a detached head {time Travel})
 
 
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+
