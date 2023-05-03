@@ -4,7 +4,7 @@ cd (you can change directory)
 cd .. (back one directory)
 ls (see all files in directory)
 pwd (show directory)
-start . (opens Directory/opens file	)
+start . (opens Directory/opens file)
 clear (clear terminal)
 touch (create file)
 mkdir (make folders/directories)
@@ -63,11 +63,11 @@ tag:
 them before)
 --amend (for mistakes, if u messed up on the prev commit like the message or forgot to 
 stage a file, then just stage them and run this, u can retype the message and commit the new staged
-items)
+it)
 
 ----------------------------------------------------
 
-8.git rm --cached <file>(removes files/folders from staging area that were staged with "git add")
+8.git rm --cached <file>(removes files/folders from staging area that were staged with "git add" AND it will no longer track them)
 
 ------------------------------------------------------------------------------------
 
