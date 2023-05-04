@@ -10,7 +10,7 @@ touch (create file)
 mkdir (make folders/directories)
 rm (delete files)
 rm -rf (deletes folder)
-cat (displays file data in terminal)
+cat <filename> (displays file data in terminal)
 
 GIT COMMANDS:
 git config user.name(Shows user name)
@@ -53,6 +53,7 @@ will not be affected unless you unstage it)
 
 6.git reset(removes all staged files from the staging area)
 
+git reset HEAD~1 (undoes the last commit by restaging all the commited files so that you can stage them again)
 -------------------------------------------------------------------------
 
 7.git clean -f(removes all untracked files)
@@ -90,7 +91,7 @@ tags:
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
-<commit ref> (you can instead switch to a diff commit you made in the past)
+<commit ref> (you can instead switch to a diff commit you made in the past, does not result in a detached head)
 
 ---------------------------------------------------------------------------------------
 
@@ -134,7 +135,7 @@ drop (delete a specific stash)
 
 ----------------------------------------------------------------------------------------------------
 
-15.git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
+15.git revert <commitid> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
 ------------------------------------------------------------------------------------------------------
@@ -144,7 +145,7 @@ drop (delete a specific stash)
 lists:
  git checkout <branch-name>(Switch to an existing branch)
 git checkout -b <new-branch-name>(make a new branch and switch to it)
-git checkout <file-name>(discards unstaged changes AND staged changes but if its staged then it wont unstage)
+git checkout <file-name>(discards unstaged changes BUT if its staged then it wont unstage the data in the staged file will remain in the index)
 git checkout .(the same with git restore)
 git checkout <commitId> filename(restores file to the chosen commit's version)
 git checkout <commitId> (Switches to old commit so now you have a detached head {time Travel})
