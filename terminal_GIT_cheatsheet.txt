@@ -38,7 +38,7 @@ tags:
 
 -------------------------------------------------------------------
 
-4. git restore . (removes all unstaged data completly, basically a clean wipe
+4. git restore . (removes all unstaged data completly, basically a clean wipe{will not affect staged data}
 but can be used to restore a file to prev version with {git restore --source=<commitID> file.txt}
 )
 
@@ -52,8 +52,9 @@ will not be affected unless you unstage it)
 ----------------------------------------------------------------------
 
 6.git reset(removes all staged files from the staging area)
-
+--hard (removes ALL changes and reverts back to the beginning of current commit) 
 git reset HEAD~1 (undoes the last commit by restaging all the commited files so that you can stage them again)
+
 -------------------------------------------------------------------------
 
 7.git clean -f(removes all untracked files)
@@ -87,7 +88,7 @@ tags:
 
 -------------------------------------------------------------------------------------
 
-11.git switch <branch>(switches to a specific branch)
+11.git switch <branch>(switches to a specific branch, also can be used to undo detached head)
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
@@ -145,7 +146,7 @@ drop (delete a specific stash)
 lists:
  git checkout <branch-name>(Switch to an existing branch)
 git checkout -b <new-branch-name>(make a new branch and switch to it)
-git checkout <file-name>(discards unstaged changes BUT if its staged then it wont unstage the data in the staged file will remain in the index)
+git checkout <file-name>(discards all changes, if its staged then it will also discard the data and unstage it)
 git checkout .(the same with git restore)
 git checkout <commitId> filename(restores file to the chosen commit's version)
 git checkout <commitId> (Switches to old commit so now you have a detached head {time Travel})
