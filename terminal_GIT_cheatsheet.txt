@@ -72,6 +72,7 @@ them before)
 --amend (for mistakes, if u messed up on the prev commit like the message or forgot to 
 stage a file, then just stage them and run this, u can retype the message and commit the new staged
 it)
+--amend -m "message" --no-edit (will amend with the new message and wont open editor)
 
 ----------------------------------------------------
 
