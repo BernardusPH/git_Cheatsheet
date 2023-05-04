@@ -45,16 +45,22 @@ but can be used to restore a file to prev version with {git restore --source=<co
 
 ----------------------------------------------------------------------------------------------------
 
-5.git add <file> (staging the files/folders of your choice, this is the first step to commiting)
+5.git add <file> (staging the files/folders of your choice, this is the first step to commiting,  ALSO NOTE: if you staged a file and then change ANYTHING the staged version
+will not be affected unless you unstage it)
 
 
 ----------------------------------------------------------------------
 
 6.git reset(removes all staged files from the staging area)
 
+-------------------------------------------------------------------------
+
+7.git clean -f(removes all untracked files)
+git clean -n (views all untracked files that will be deleted)
+
 ------------------------------------------------------------------
 
-7.git commit <tags> (basically groups all the chosen changes to the repo and makes a checkpoint,
+8.git commit <tags> (basically groups all the chosen changes to the repo and makes a checkpoint,
 almost the same as saving but git does not save, only remembers the chosen files/folders
 that was added and commited, without -m it will open another editor)
 tag:
@@ -67,11 +73,11 @@ it)
 
 ----------------------------------------------------
 
-8.git rm --cached <file>(removes files/folders from staging area that were staged with "git add" AND it will no longer track them)
+9.git rm --cached <file>(removes files/folders from staging area that were staged with "git add" AND it will no longer track them  )
 
 ------------------------------------------------------------------------------------
 
-9. git branch (shows all the branches of the repository)
+10. git branch (shows all the branches of the repository)
 tags:
 <name> (makes a new branch{BUT IT DOES NOT SWITCH TO IT})
  -D <name> (delete branch but be careful since it uses --force)
@@ -80,7 +86,7 @@ tags:
 
 -------------------------------------------------------------------------------------
 
-10.git switch <branch>(switches to a specific branch)
+11.git switch <branch>(switches to a specific branch)
 
 tags:
 -c <branch name> (Makes AND switches to that branch)
@@ -88,7 +94,7 @@ tags:
 
 ---------------------------------------------------------------------------------------
 
-11.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
+12.git merge <branch name> (OH BOY. ok the current HEAD branch merges with the <branch name>.
 A fast forward merge is a merge where the SELECTED HEAD does not have any commits when you merge it with
 <branch name> that has commits{ it simply catches up})
 (a non fast forward merge is if the HEAD branch has commits after the creation of the branch
@@ -97,7 +103,7 @@ that we are merging with. This might cause merge conflicts)
 
 --------------------------------------------------------------------------------------------------
 
-12.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files, also it does not show
+13.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files, also it does not show
 for untracked files)
 (NOTE:USE THIS ON GIT KRAKEN OR AN ENLARGED GIT BASH TERMINAL. The screen will bug out and not show you
 all the details in a small terminal)
@@ -110,12 +116,12 @@ branch1..branch2 (shows diff between branches)
 commit1..commit2 (this should be in ref form, so basically (f4223r43..fewe32fewef) as an example but this will show you the diff between two commits)
 
 
-git --no-pager diff (does the same as git diff but it shows all changes, helps with small window errors)
+git --no-pager diff (run this if the terminal does not show all details)
 
 
 --------------------------------------------------------------------------------------------------------------
 
-13.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
+14.git stash (stores staged and unstaged files in the stash and remove all changes, can use stash multiple times back to back.)
 TAGS:
 list (shows all stashes in the directory)
 pop (brings out everything from the stash and removes the stash)
@@ -128,7 +134,7 @@ drop (delete a specific stash)
 
 ----------------------------------------------------------------------------------------------------
 
-14 git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
+15.git revert <commit> (very complicated,In Git, the revert command is used to create a new commit that undoes the changes you made to the prev commit.
  When you use revert, Git does not erase the previous commit; instead, it creates a new commit that effectively "undoes" the changes made by the previous commit.)
 
 ------------------------------------------------------------------------------------------------------
