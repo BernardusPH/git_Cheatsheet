@@ -38,9 +38,15 @@ tags:
 
 -------------------------------------------------------------------
 
-4. git restore . (removes all unstaged data completly, basically a clean wipe{will not affect staged data}
-but can be used to restore a file to prev version with {git restore --source=<commitID> file.txt}
+4. git restore . (removes all unstaged data completly, basically a clean wipe{will not affect staged data})
+but can be used to restore a file to prev version with {git restore --source=<commitID> file.txt}, if you use restore on a file you restored to prev version
+then it will revert to last commit.
 )
+tags:
+ --source=<commitID> file.txt( can be used to restore a file to prev version, if you use restore on a file you restored to prev version
+then it will revert to last commit.)
+
+--staged <filename> (removes file from staging area)
 
 
 ----------------------------------------------------------------------------------------------------
@@ -51,9 +57,12 @@ will not be affected unless you unstage it)
 
 ----------------------------------------------------------------------
 
-6.git reset(removes all staged files from the staging area)
---hard (removes ALL changes and reverts back to the beginning of current commit) 
-git reset HEAD~1 (undoes the last commit by restaging all the commited files so that you can stage them again)
+6.git reset(reverts back to prev commits of your choosing)
+tags:
+<commitid> (This will do a soft reset, meaning the commits you've done after the chosen commit will be lost but the changed data will be kept)
+--hard  (removes ALL changes and reverts back to the beginning of current commit) 
+--hard <commitid>( goes to a specific commit while removing the data and all the commits after the chosen commit)
+
 
 -------------------------------------------------------------------------
 
@@ -94,6 +103,7 @@ tags:
 tags:
 -c <branch name> (Makes AND switches to that branch)
 <commit ref> (you can instead switch to a diff commit you made in the past, does not result in a detached head)
+-- (will switch to prev branch)
 
 ---------------------------------------------------------------------------------------
 
@@ -147,7 +157,7 @@ drop (delete a specific stash)
 lists:
  git checkout <branch-name>(Switch to an existing branch)
 git checkout -b <new-branch-name>(make a new branch and switch to it)
-git checkout <file-name>(discards all changes, if its staged then it will also discard the data and unstage it)
+git checkout <file-name>(discards all unstaged changes, can be used with {HEAD/--} to also revert the file back to prev commit, this will also unstage it)
 git checkout .(the same with git restore)
 git checkout <commitId> filename(restores file to the chosen commit's version)
 git checkout <commitId> (Switches to old commit so now you have a detached head {time Travel})
