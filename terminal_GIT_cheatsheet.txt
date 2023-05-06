@@ -39,8 +39,7 @@ tags:
 -------------------------------------------------------------------
 
 4. git restore . (removes all unstaged data completly, basically a clean wipe{will not affect staged data})
-but can be used to restore a file to prev version with {git restore --source=<commitID> file.txt}, if you use restore on a file you restored to prev version
-then it will revert to last commit.
+
 )
 tags:
  --source=<commitID> file.txt( can be used to restore a file to prev version, if you use restore on a file you restored to prev version
@@ -103,7 +102,7 @@ tags:
 tags:
 -c <branch name> (Makes AND switches to that branch)
 <commit ref> (you can instead switch to a diff commit you made in the past, does not result in a detached head)
--- (will switch to prev branch)
+- (will switch to prev branch)
 
 ---------------------------------------------------------------------------------------
 
@@ -118,8 +117,7 @@ that we are merging with. This might cause merge conflicts)
 
 13.git diff (shows the diff between files. If you run this as is then it will show you the diff between your last commit and the current UNSTAGED saved files, also it does not show
 for untracked files)
-(NOTE:USE THIS ON GIT KRAKEN OR AN ENLARGED GIT BASH TERMINAL. The screen will bug out and not show you
-all the details in a small terminal)
+
 
 TAGS:
 HEAD (shows the same as the above BUT for every change since your last commit even staged changes but still not for the untracked files)
