@@ -102,7 +102,7 @@ tags:
 tags:
 -c <branch name> (Makes AND switches to that branch)
 <commit ref> (you can instead switch to a diff commit you made in the past, does not result in a detached head)
-- (will switch to prev branch)
+- (will switch to prev branch, might cause a warning so just deal with it)
 
 ---------------------------------------------------------------------------------------
 
